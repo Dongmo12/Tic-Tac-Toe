@@ -1,8 +1,9 @@
 class Board
-    attr_accessor :post
+    attr_reader :post
      def initialize()
         @post = [ 1,2,3,4,5,6,7,8,9 ]
      end
+ 
     def display
          puts "\t|-------------------|"
          puts "\t|-----TIC-TAC-TOE---|"
@@ -15,7 +16,6 @@ class Board
          puts "\t    #{@post[6]} | #{@post[7]} | #{@post[8]} " 
          puts "\t   ---|---|---"
     end
-
 end
 # w='K'
 
