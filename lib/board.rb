@@ -5,16 +5,16 @@ class Board
      end
  
     def display
-         puts "\t|-------------------|"
-         puts "\t|-----TIC-TAC-TOE---|"
-         puts "\t|___________________|"
+        display_message ("\t|-------------------|")
+        display_message ("\t|-----TIC-TAC-TOE---|")
+        display_message ("\t|___________________|")
        
-         puts "\t    #{@post[0]} | #{@post[1]} | #{@post[2]} "
-         puts "\t   ---|---|---"
-         puts "\t    #{@post[3]} | #{@post[4]} | #{@post[5]} "
-         puts "\t   ---|---|---"
-         puts "\t    #{@post[6]} | #{@post[7]} | #{@post[8]} " 
-         puts "\t   ---|---|---"
+        display_message ("\t    #{@post[0]} | #{@post[1]} | #{@post[2]} ")
+        display_message ("\t   ---|---|---")
+        display_message ("\t    #{@post[3]} | #{@post[4]} | #{@post[5]} ")
+        display_message ("\t   ---|---|---")
+        display_message ("\t    #{@post[6]} | #{@post[7]} | #{@post[8]} " )
+        display_message ("\t   ---|---|---")
     end
 end
 # w='K'
