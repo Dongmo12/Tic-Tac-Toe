@@ -27,7 +27,6 @@ class Board
     display_message "\t|     #{@post[3]} | #{@post[4]} | #{@post[5]}     |"
     display_message "\t|    ---|---|---    |"
     display_message "\t|     #{@post[6]} | #{@post[7]} | #{@post[8]}     |"
-    display_message "\t|    ---|---|---    |"
-    display_message "\t|___________________|"
+    display_message "\t|    ---|---|---    |\n\t|___________________|"
   end
 end
