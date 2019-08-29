@@ -5,28 +5,21 @@ require_relative '../lib/player'
 require_relative '../lib/game_logic'
 
 board = Board.new
-user_one = Player.new('user_one', 'O')
-user_two = Player.new('user_two', 'T')
+user_one = Player.new('user_one', 'X')
+user_two = Player.new('user_two', 'O')
 
-def receive_player_one_input
-  display_message 'enter username for player_one, the first letter of this name
-    will be your player character'
-  @player_one = gets.chomp.to_s.capitalize
-  @userid1 = @player_one[0].upcase
-end
-
-def receive_player_two_input
-  display_message 'enter username for player_two, the first letter of this name
-    will be your player character'
-  @player_two = gets.chomp.to_s.capitalize
-  @userid2 = @player_two[0].to_s.upcase
+def receive_player_input(player, symbol)
+  display_message "Enter username for #{player}. You are player \'#{symbol}\'."
+  gets.chomp.to_s.capitalize
 end
 
 def setup_users
-  display_message ' welcome to the tic-tac-toe game '
+  display_message ' Welcome to the tic-tac-toe game !! '
   @board.display
-  receive_player_one_input
-  receive_player_two_input
+  @userid1 = 'X'
+  @player_one = receive_player_input('player one', @userid1)
+  @userid2 = 'O'
+  @player_two = receive_player_input('player two', @userid2)
 end
 
 def display_message(input)
