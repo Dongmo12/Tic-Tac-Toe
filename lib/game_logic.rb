@@ -36,12 +36,12 @@ class GameLogic
   def process_moves(option, character, current_player)
     @wins = @wins.each do |moves|
       moves[moves.find_index(option)] = character if moves.include? option
-      if Set.new(moves).length == 1
-        display_message('GAME OVER!')
-        display_message("#{current_player} Wins!")
-        @board.display
-        return true
-      end
+      next unless Set.new(moves).length == 1
+
+      display_message('GAME OVER!')
+      display_message("#{current_player} Wins!")
+      @board.display
+      return true
     end
     false
   end
